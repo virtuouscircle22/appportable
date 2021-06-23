@@ -1,0 +1,18 @@
+<table>
+	<tr>
+		<th>O3</th>
+		<th>NO2</th>
+		<th>CO</th>
+		<th>Latitud</th>
+		<th>Longitud</th>
+		<th>Fecha</th>
+	</tr>
+	<tr *ngFor="let aire of aires; index as a">
+		<td>{{aire.O3}}</td>
+		<td>{{aire.NO2}}</td>
+		<td>{{aire.CO}}</td>
+		<td>{{aire.Latitud}}</td>
+		<td>{{aire.Longitud}}</td>
+    	<td>{{aire.Fecha}}</td>
+	</tr>
+</table>

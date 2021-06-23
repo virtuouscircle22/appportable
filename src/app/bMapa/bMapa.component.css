@@ -1,0 +1,82 @@
+.map-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+}
+
+.map-frame {
+  border: 2px solid rgb(245, 229, 229);
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+
+* {
+  color: black;
+}
+
+table, th, td {
+  border: 1px solid rgb(108, 168, 224);
+  padding: 10px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td {
+  color: white;
+  background-color: transparent;
+}
+
+th {
+  background-color: rgb(172, 230, 119);
+  border: 1px solid white;
+  color: black
+}
+
+p {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+input {
+  background-color: white;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.button {
+  background-color: white;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.button:active {
+  background-color: green;
+  transform: translateY(6px); 
+}
+
+.button:hover {
+  background-color: #6ff1aa  ;
+  transform: translateY(4px);
+}
+
+.t1 {
+  text-align: right;
+}
+
+div.centraTabla{
+  margin-top: 5%;
+  text-align: center;
+  }
+  
+div.centraTabla table {
+  margin: 0 auto;
+  text-align: left;
+}

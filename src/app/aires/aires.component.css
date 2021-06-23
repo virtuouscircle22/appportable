@@ -1,0 +1,55 @@
+* {
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid #333;
+  padding: 10px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td {
+  color: black;
+  background-color: transparent;
+}
+
+th {
+  background-color: #333;
+  border: 1px solid black;
+  color: white
+}
+
+p {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+input {
+  background-color: #333;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+button {
+  background-color: #333;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.t1 {
+  text-align: right;
+}
+
+div.centraTabla{
+  margin-top: 3%;
+  text-align: center;
+  }
+  
+div.centraTabla table {
+  margin: 0 auto;
+  text-align: left;
+}

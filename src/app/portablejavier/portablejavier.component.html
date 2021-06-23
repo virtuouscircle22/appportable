@@ -1,0 +1,59 @@
+<body class="fondo">
+    <br>
+    <h4>Datos del Dispositivo 1:</h4>
+	<form (ngSubmit)="onSubmit()" #heroForm="ngForm" class="form horizontal">
+		<div class="panel-info">
+			<div class="panel-body">
+				<div class="form-group ">
+                    <label for="fecha" class="col-lg-2 control-label ml-3">Fechas disponibles...
+                        <div class="col-lg-15">
+                            <select           
+                                type="text"
+                                class="form-control"
+                                id="fecha"
+                                required
+                                [(ngModel)]="seleccionado"
+                                name="fecha"
+                                #pais="ngModel"
+                            >
+                                <option 
+                                    *ngFor="let fecha of fD" 
+                                    [value]="fecha">{{fecha}}
+                                </option>
+                            </select>
+                        </div>
+                    </label>
+                    <button
+                        type="submit"
+                        class="btn btn-success"
+                        [disabled]="!heroForm.form.valid"
+                    >
+                        Cargar...
+                    </button>
+				</div>
+			</div>
+		</div>
+	</form>
+    <div class="centraTabla">
+        <table class="fechas">
+            <tr>
+                <th>Hora</th>   
+                <th>CO2 (ppm)</th>
+                <th>NO (µg/m<sup>3</sup>)</th>
+                <th>NH3 (ppm)</th>
+                <th>Mapa</th>
+            </tr>
+            <tr *ngFor="let linea of fechas; index as a">
+                <td>{{linea.date | date:'HH:mm'}}</td>
+                <td>{{linea.CO2}}</td>
+                <td>{{linea.NO}}</td>
+                <td>{{linea.NH3}}</td>
+                <td>
+                    <a (click)="getFechaApi3(linea)" class="button">
+                        <i class="material-icons">map</i>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>

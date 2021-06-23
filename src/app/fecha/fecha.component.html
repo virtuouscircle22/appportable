@@ -1,0 +1,59 @@
+<body class="fondo">
+	<br>
+	<h4>Datos del Dispositivo 2:</h4>
+	<form (ngSubmit)="onSubmit()" #heroForm="ngForm" class="form horizontal">
+		<div class="panel-info">
+			<div class="panel-body">
+				<div class="form-group ">
+					<label for="fecha" class="col-lg-2 control-label ml-3">Fechas disponibles...
+						<div class="col-lg-15">
+							<select           
+								type="text"
+								class="form-control"
+								id="fecha"
+								required
+								[(ngModel)]="seleccionado"
+								name="fecha"
+								#pais="ngModel"
+							>
+								<option 
+									*ngFor="let fecha of fD" 
+									[value]="fecha">{{fecha}}
+								</option>
+							</select>
+						</div>
+					</label>
+					<button
+						type="submit"
+						class="btn btn-success"
+						[disabled]="!heroForm.form.valid"
+					>
+						Cargar...
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
+	<div class="centraTabla">
+		<table class="fechas">
+			<tr>
+				<th>Hora</th>
+				<th>O3 (µg/m<sup>3</sup>)</th>
+				<th>NO2 (µg/m<sup>3</sup>)</th>
+				<th>CO (mg/m<sup>3</sup>)</th>
+				<th>Mapa</th>
+			</tr>
+			<tr *ngFor="let linea of fechas; index as a">
+				<td>{{linea.fecha | date:'HH:mm'}}</td>
+				<td>{{linea.O3}}</td>
+				<td>{{linea.NO2}}</td>
+				<td>{{linea.CO}}</td>
+				<td>
+					<a (click)="getFechaApi3(linea)" class="button">
+						<i class="material-icons">map</i>
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
